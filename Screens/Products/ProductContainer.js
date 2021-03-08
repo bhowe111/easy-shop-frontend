@@ -5,6 +5,7 @@ import {
   ActivityIndicator,
   FlatList,
   Dimensions,
+  ScrollView,
 } from "react-native";
 import { Container, Header, Icon, Item, Input, Text } from "native-base";
 
@@ -31,6 +32,7 @@ const ProductContainer = () => {
     setProductsFiltered(data);
     setFocus(false);
     setCategories(productsCategories);
+    setProductsCtg(data);
     setActive(-1);
     setInitialState(data);
 
@@ -88,29 +90,33 @@ const ProductContainer = () => {
       {focus == true ? (
         <SearchedProduct productsFiltered={productsFiltered} />
       ) : (
-        <View>
+        <ScrollView>
           <View>
-            <Banner />
             <View>
-              <CategoryFilter
-                categories={categories}
-                categoryFilter={changeCtg}
-                productsCtg={productsCtg}
-                active={active}
-                setActive={setActive}
-              />
+              <Banner />
+              <View>
+                <CategoryFilter
+                  categories={categories}
+                  categoryFilter={changeCtg}
+                  productsCtg={productsCtg}
+                  active={active}
+                  setActive={setActive}
+                />
+              </View>
             </View>
+            {productsCtg.length > 0 ? (
+              <View style={styles.listContainer}>
+                {productsCtg.map((item) => {
+                  return <ProductList key={item._id} item={item} />;
+                })}
+              </View>
+            ) : (
+              <View style={[styles.center, { height: height / 2 }]}>
+                <Text>No products found</Text>
+              </View>
+            )}
           </View>
-          <View style={{ marginTop: 100 }}>
-            <FlatList
-              data={products}
-              renderItem={({ item }) => (
-                <ProductList key={item.id} item={item} />
-              )}
-              keyExtractor={(item) => item.name}
-            />
-          </View>
-        </View>
+        </ScrollView>
       )}
     </Container>
   );
