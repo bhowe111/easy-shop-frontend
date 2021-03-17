@@ -6,7 +6,6 @@ import cartItems from "./Reducers/cartItem";
 
 const reducers = combineReducers({
   cartItems: cartItems,
-  //cartReducer
 });
 
 const store = createStore(
