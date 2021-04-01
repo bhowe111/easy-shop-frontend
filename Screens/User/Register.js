@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, Button } from "react-native";
 import FormContainer from "../../Shared/Form/FormContainer";
 import Input from "../../Shared/Form/Input";
 import Error from "../../Shared/Error";
-import Toast from 'react-native-toast-message';
+import EasyButton from "../../Shared/StyledComponents/EasyButton";
+import Toast from "react-native-toast-message";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 import axios from "axios";
@@ -36,9 +37,9 @@ const Register = (props) => {
           Toast.show({
             topOffset: 60,
             type: "success",
-            text1: "Registration successful"
-            text2: "Please log in to your account"
-          })
+            text1: "Registration successful",
+            text2: "Please log in to your account",
+          });
           setTimeout(() => {
             props.navigation.navigate("Login");
           }, 500);
@@ -47,9 +48,9 @@ const Register = (props) => {
       .catch((error) => {
         Toast.show({
           topOffset: 60,
-          type: 'error',
-          text1: 'Something went wrong',
-          text2: "Please try again"
+          type: "error",
+          text1: "Something went wrong",
+          text2: "Please try again",
         });
       });
   };
@@ -91,13 +92,18 @@ const Register = (props) => {
           {error ? <Error message={error} /> : null}
         </View>
         <View>
-          <Button title={"Register"} onPress={() => register()} />
+          <EasyButton
+            large
+            secondary
+            onPress={() => props.navigation.navigate("Register")}
+          >
+            <Text style={{ color: "white" }}>Register</Text>
+          </EasyButton>
         </View>
         <View>
-          <Button
-            title={"Back to Login"}
-            onPress={() => props.navigation.navigate("Login")}
-          />
+          <EasyButton large primary onPress={() => handleSubmit()}>
+            <Text style={{ color: "white" }}>Back to Login</Text>
+          </EasyButton>
         </View>
       </FormContainer>
     </KeyboardAwareScrollView>

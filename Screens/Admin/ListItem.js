@@ -8,54 +8,70 @@ import {
   TouchableOpacity,
   Dimensions,
   Button,
-  Modal
+  Modal,
 } from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
+import EasyButton from "../../Shared/StyledComponents/EasyButton";
 
 var { width } = Dimensions.get("window");
 
 const ListItem = (props) => {
-  const [modalVisible, setModalVisible] = useState(false)
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <View>
-    <Modal
-    animationType="fade"
-    transparent={true}
-    visible={modadlVisible}
-    onRequestClose={() => {
-      setModalVisible(false)
-    }}>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          <TouchableOpacity
-          underlayColor="#e8e8e8"backgroundonPress={() =>{
-            setModalVisible(false)
-          }} style={{ alignSelf: 'flex-end', position: 'absolute', top: 5, right: 10, }}>
-          <Icon name="close" size={20}/>
-
-          </TouchableOpacity>
-          <Button title="Edit"
-            onPress={() = [
-              props.navigation.navigate('ProductForm'),
-              setModalVisible(false)
-            ]}
-          />
-          <Button title="Delete"
-            // Delete
-          />
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modadlVisible}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <TouchableOpacity
+              underlayColor="#e8e8e8"
+              onPress={() => {
+                setModalVisible(false);
+              }}
+              style={{
+                alignSelf: "flex-end",
+                position: "absolute",
+                top: 5,
+                right: 10,
+              }}
+            >
+              <Icon name="close" size={20} />
+            </TouchableOpacity>
+            <EasyButton
+              style={styles.textStyle}
+              medium
+              secondary
+              onPress={() => [
+                props.navigation.navigate("ProductForm", { item: props }),
+                setModalVisible(false),
+              ]}
+            >
+              <Text>Edit</Text>
+            </EasyButton>
+            <EasyButton style={styles.textStyle} medium danger>
+              <Text>Delete</Text>
+            </EasyButton>
+          </View>
         </View>
-      </View>
-
-    </Modal>
+      </Modal>
       <TouchableOpacity
-      onPress={() => {
-        props.navigation,navigate('Product Detail', { item: props })
-      }}
-      onLongPress={() => setModalVisible(true)}
-      style={[styles.container, {
-        backgroundColor: props.index% 2  == 0 ? 'white' : 'gainsboro'
-      }]}
+        onPress={() => {
+          props.navigation, navigate("Product Detail", { item: props });
+        }}
+        onLongPress={() => setModalVisible(true)}
+        style={[
+          styles.container,
+          {
+            backgroundColor: props.index % 2 == 0 ? "white" : "gainsboro",
+          },
+        ]}
       >
         <Image
           source={{
@@ -81,43 +97,46 @@ const ListItem = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     padding: 5,
-    width: width
+    width: width,
   },
   image: {
     borderRadius: 50,
     width: width / 6,
     height: 20,
-    margin: 2
+    margin: 2,
   },
   item: {
-    flexWrap: 'wrap',
+    flexWrap: "wrap",
     margin: 3,
-    width: width / 6
+    width: width / 6,
   },
   centeredView: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22,
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 20,
     padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: {
-      width: 0, 
-      height: 2
+      width: 0,
+      height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 0.84,
-    elevation: 5
-  }
-
-)
+    elevation: 5,
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+  },
+});
 
 export default ListItem;

@@ -11,7 +11,7 @@ import { SwipeListView } from "react-native-swipe-list-view";
 import CartItem from "./CartItem";
 
 import Icon from "react-native-vector-icons/FontAwesome";
-// import EasyButton from "../../Shared/StyledComponents/EasyButton"
+import EasyButton from "../../Shared/StyledComponents/EasyButton";
 
 import { connect } from "react-redux";
 import * as actions from "../../Redux/Actions/cartActions";
@@ -57,35 +57,30 @@ const Cart = (props) => {
             <Left>
               <Text style={styles.price}>$ {total}</Text>
             </Left>
-            {/* <Right>
-                <EasyButton
-                  danger
-                  medium
-                  onPress={() => props.clearCart()}
-                >
-                  <Text style={{ color: 'white' }}>Clear</Text>
-                </EasyButton>
-            </Right> */}
-            {/* <Right>
-              {context.stateUser.isAuthenticated ? (
-                <EasyButton
-                  primary
-                  medium
-                  onPress={() => props.navigation.navigate('Checkout')}
-                >
-                <Text style={{ color: 'white' }}>Checkout</Text>
-                </EasyButton>
-              ) : (
-                <EasyButton
-                  secondary
-                  medium
-                  onPress={() => props.navigation.navigate('Login')}
-                >
-                <Text style={{ color: 'white' }}>Login</Text>
-                </EasyButton>
+            <Right>
+              <EasyButton danger medium onPress={() => props.clearCart()}>
+                <Text style={{ color: "white" }}>Clear</Text>
+              </EasyButton>
+            </Right>
+            <Right>
+              {/* {context.stateUser.isAuthenticated ? ( */}
+              <EasyButton
+                primary
+                medium
+                onPress={() => props.navigation.navigate("Checkout")}
+              >
+                <Text style={{ color: "white" }}>Checkout</Text>
+              </EasyButton>
+              {/* ) : ( */}
+              <EasyButton
+                secondary
+                medium
+                onPress={() => props.navigation.navigate("Login")}
+              >
+                <Text style={{ color: "white" }}>Login</Text>
+              </EasyButton>
               )}
-                
-            </Right> */}
+            </Right>
             <Right>
               <Button
                 title="Checkout"

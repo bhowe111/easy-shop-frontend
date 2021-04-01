@@ -46,7 +46,7 @@ const ProductContainer = (props) => {
           setLoading(false);
         })
         .catch((error) => {
-          console.log("Api call error");
+          console.log(error);
         });
 
       // Categories
@@ -56,7 +56,7 @@ const ProductContainer = (props) => {
           setCategories(res.data);
         })
         .catch((error) => {
-          console.log("Api call error");
+          console.log("Api call error product container categories");
         });
 
       return () => {
