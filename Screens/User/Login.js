@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { View, Text, StyleSheet, Button } from "react-native";
 import FormContainer from "../../Shared/Form/FormContainer";
 import Input from "../../Shared/Form/Input";
@@ -17,7 +17,7 @@ const Login = (props) => {
 
   useEffect(() => {
     if (context.stateUser.isAuthenticated === true) {
-      props.navigations.navigate("User Profile");
+      props.navigation.navigate("User Profile");
     }
   }, [context.stateUser.isAuthenticated]);
 
@@ -26,6 +26,7 @@ const Login = (props) => {
       email,
       password,
     };
+
     if (email === "" || password === "") {
       setError("Please fill in your credentials");
     } else {
@@ -74,6 +75,10 @@ const styles = StyleSheet.create({
   buttonGroup: {
     width: "80%",
     alignItems: "center",
+  },
+  middleText: {
+    marginBottom: 20,
+    alignSelf: "center",
   },
 });
 

@@ -151,7 +151,7 @@ const ProductForm = (props) => {
         .catch((error) => {
           Toast.show({
             topOffset: 60,
-            type: "success",
+            type: "error",
             text1: "Oops, something went wrong",
             text2: "Please try again",
           });

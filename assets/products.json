@@ -3,14 +3,14 @@
     "_id": {
       "$oid": "5f15d8852a025143f9593a7c"
     },
-    "image": "https://www.freepngimg.com/thumb/fifa/11-2-fifa-png-images.png",
-    "brand": "PS3",
-    "price": 250,
-    "rating": 1,
+    "image": "http://assets.stickpng.com/images/580b585b2edbce24c47b2b82.png",
+    "brand": "Burton",
+    "price": 600,
+    "rating": 4,
     "numReviews": 0,
     "isFeatured": true,
-    "name": "FIFA 20",
-    "description": "The most hard FIFA ever",
+    "name": "Process Flying V Men's Snowboard",
+    "description": "2021 model",
     "category": {
       "$oid": "5f15d5cdcb4a6642bddc0fe9"
     },
@@ -39,14 +39,14 @@
     "_id": {
       "$oid": "5f15d964e520d44421ed8e9c"
     },
-    "image": "",
-    "brand": "OBI",
-    "price": 1350.9,
+    "image": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf08.png",
+    "brand": "Outdoor Research",
+    "price": 38,
     "rating": 5,
     "numReviews": 0,
     "isFeatured": true,
-    "name": "Swimming Pool",
-    "description": "beautiful Swimming Pool for garden",
+    "name": "Garden Gloves",
+    "description": "Durable gloves for manual labor",
     "category": {
       "$oid": "5f15d5b7cb4a6642bddc0fe8"
     },
@@ -63,8 +63,8 @@
     "rating": 5,
     "numReviews": 0,
     "isFeatured": true,
-    "name": "Grass Cut Machine",
-    "description": "Grass Cut Machine for garden",
+    "name": "Weed Whacker",
+    "description": "OBI 760 lawn care",
     "category": {
       "$oid": "5f15d5b7cb4a6642bddc0fe8"
     },
@@ -75,18 +75,72 @@
     "_id": {
       "$oid": "5f15da13e520d44421ed8e9e"
     },
-    "image": "https://lh3.googleusercontent.com/proxy/XRK6WCBqL7Yzk4Nfxm_d-cnRM4VzWCPMIL_B7rgDLPet9EGxjtCaUlE2odE5RavcduJDBngkiTi6YwGbI-t7mX_pdx1ZjdjKkRlcukoyPOb-pw",
+    "image": "http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c27d.png",
     "brand": "Mobilix",
     "price": 1000,
     "rating": 5,
     "numReviews": null,
     "isFeatured": true,
     "name": "Sofa",
-    "description": "Big Sofa for living room",
+    "description": "Sofa for indoor seating",
     "category": {
       "$oid": "5f15d5b2cb4a6642bddc0fe7"
     },
     "countInStock": 2,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "606df66bb2336f05fc8db47e"
+    },
+    "image": "http://assets.stickpng.com/thumbs/585aa8d74f6ae202fedf290b.png",
+    "brand": "Fender",
+    "price": 1200,
+    "rating": 5,
+    "numReviews": 4,
+    "isFeatured": true,
+    "name": "Fender Jaguar",
+    "description": "Sunburst Electric Guitar",
+    "category": {
+      "$oid": "606dfb2ab2336f05fc8db47f"
+    },
+    "countInStock": 12,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6070b28a49703d8f5b0ec5df"
+    },
+    "image": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b27cb.png",
+    "brand": "Lotus",
+    "price": 15,
+    "rating": 2,
+    "numReviews": 0,
+    "isFeatured": true,
+    "name": "Lotus Hand Lotion",
+    "description": "Skin care cream",
+    "category": {
+      "$oid": "5f15d545f3a046427a1c26e2"
+    },
+    "countInStock": 3,
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "606e0555b2336f05fc8db483"
+    },
+    "image": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bfba.png",
+    "brand": "Beats by Dre",
+    "price": 100,
+    "rating": 3,
+    "numReviews": 1,
+    "isFeatured": true,
+    "name": "Beats Headphones",
+    "description": "Pink wireless headphones",
+    "category": {
+      "$oid": "5f15d545f3a046427a1c26e1"
+    },
+    "countInStock": 400,
     "__v": 0
   }
 ]

@@ -9,9 +9,10 @@ const Banner = () => {
 
   useEffect(() => {
     setBannerData([
-      "https://images.vexels.com/media/users/3/126443/preview2/ff9af1e1edfa2c4a46c43b0c2040ce52-macbook-pro-touch-bar-banner.jpg",
-      "https://pbs.twimg.com/media/D7P_yLdX4AAvJWO.jpg",
-      "https://www.yardproduct.com/blog/wp-content/uploads/2016/01/gardening-banner.jpg",
+      "https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://www.sportrx.com/sportrx-blog/wp-content/uploads/2019/07/real-ray-bans-vs-fake-ray-bans.jpg",
+      "https://shershegoes.com/wp-content/uploads/best-chelsea-boots-womens.jpg",
+      "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2021/01/best_garden_trowel-main.jpg",
     ]);
 
     return () => {
@@ -27,7 +28,7 @@ const Banner = () => {
             style={{ height: width / 2 }}
             showButtons={false}
             autoplay={true}
-            autoplayTimeout={2}
+            autoplayTimeout={4}
           >
             {bannerData.map((item) => {
               return (

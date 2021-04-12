@@ -14,6 +14,7 @@ import * as actions from "../../Redux/Actions/cartActions";
 
 import EasyButton from "../../Shared/StyledComponents/EasyButton";
 import TrafficLight from "../../Shared/StyledComponents/TrafficLight";
+import Toast from "react-native-toast-message";
 
 const SingleProduct = (props) => {
   const [item, setItem] = useState(props.route.params.item);

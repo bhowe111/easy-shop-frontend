@@ -92,16 +92,16 @@ const Register = (props) => {
           {error ? <Error message={error} /> : null}
         </View>
         <View>
-          <EasyButton
-            large
-            secondary
-            onPress={() => props.navigation.navigate("Register")}
-          >
+          <EasyButton large secondary onPress={() => register()}>
             <Text style={{ color: "white" }}>Register</Text>
           </EasyButton>
         </View>
         <View>
-          <EasyButton large primary onPress={() => handleSubmit()}>
+          <EasyButton
+            large
+            primary
+            onPress={() => props.navigation.navigate("Login")}
+          >
             <Text style={{ color: "white" }}>Back to Login</Text>
           </EasyButton>
         </View>

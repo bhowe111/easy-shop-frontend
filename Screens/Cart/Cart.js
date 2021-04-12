@@ -1,11 +1,5 @@
 import React, { useContext } from "react";
-import {
-  View,
-  Dimensions,
-  StyleSheet,
-  TouchableOpacity,
-  Button,
-} from "react-native";
+import { View, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import { Container, Text, Left, Right, H1 } from "native-base";
 import { SwipeListView } from "react-native-swipe-list-view";
 import CartItem from "./CartItem";
@@ -15,12 +9,12 @@ import EasyButton from "../../Shared/StyledComponents/EasyButton";
 
 import { connect } from "react-redux";
 import * as actions from "../../Redux/Actions/cartActions";
-// import AuthGlobal from "../../Context/store/AuthGlobal"
+import AuthGlobal from "../../Context/store/AuthGlobal";
 
 var { height, width } = Dimensions.get("window");
 
 const Cart = (props) => {
-  // const context = useContext(AuthGlobal);
+  const context = useContext(AuthGlobal);
 
   var total = 0;
   props.cartItems.forEach((cart) => {
@@ -63,31 +57,23 @@ const Cart = (props) => {
               </EasyButton>
             </Right>
             <Right>
-              {/* {context.stateUser.isAuthenticated ? ( */}
-              <EasyButton
-                primary
-                medium
-                onPress={() => props.navigation.navigate("Checkout")}
-              >
-                <Text style={{ color: "white" }}>Checkout</Text>
-              </EasyButton>
-              {/* ) : ( */}
-              <EasyButton
-                secondary
-                medium
-                onPress={() => props.navigation.navigate("Login")}
-              >
-                <Text style={{ color: "white" }}>Login</Text>
-              </EasyButton>
+              {context.stateUser.isAuthenticated ? (
+                <EasyButton
+                  primary
+                  medium
+                  onPress={() => props.navigation.navigate("Checkout")}
+                >
+                  <Text style={{ color: "white" }}>Checkout</Text>
+                </EasyButton>
+              ) : (
+                <EasyButton
+                  secondary
+                  medium
+                  onPress={() => props.navigation.navigate("Login")}
+                >
+                  <Text style={{ color: "white" }}>Login</Text>
+                </EasyButton>
               )}
-            </Right>
-            <Right>
-              <Button
-                title="Checkout"
-                onPress={() => props.navigation.navigate("Checkout")}
-              >
-                <Text>Checkout</Text>
-              </Button>
             </Right>
           </View>
         </Container>

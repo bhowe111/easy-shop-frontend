@@ -40,5 +40,12 @@
     },
     "name": "Games",
     "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "606dfb2ab2336f05fc8db47f"
+    },
+    "name": "Music",
+    "__v": 0
   }
 ]
