@@ -60,10 +60,9 @@ const Login = (props) => {
       <View style={[{ marginTop: 40 }, styles.buttonGroup]}>
         <Text style={styles.middleText}>Don't have an account yet?</Text>
         <EasyButton
-          large
-          secondary
-          onPress={() => props.navigation.navigate("Register")}
-        >
+        large
+        secondary 
+        onPress={() => props.navigation.navigate("Register")}>
           <Text style={{ color: "white" }}>Register</Text>
         </EasyButton>
       </View>

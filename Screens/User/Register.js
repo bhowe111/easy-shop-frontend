@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, Button } from "react-native";
 import FormContainer from "../../Shared/Form/FormContainer";
 import Input from "../../Shared/Form/Input";
 import Error from "../../Shared/Error";
-import EasyButton from "../../Shared/StyledComponents/EasyButton";
 import Toast from "react-native-toast-message";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import EasyButton from "../../Shared/StyledComponents/EasyButton";
 
 import axios from "axios";
 import baseURL from "../../assets/common/baseUrl";
@@ -29,7 +29,6 @@ const Register = (props) => {
       phone: phone,
       isAdmin: false,
     };
-
     axios
       .post(`${baseURL}users/register`, user)
       .then((res) => {
@@ -37,8 +36,8 @@ const Register = (props) => {
           Toast.show({
             topOffset: 60,
             type: "success",
-            text1: "Registration successful",
-            text2: "Please log in to your account",
+            text1: "Registration Succeeded",
+            text2: "Please Login into your account",
           });
           setTimeout(() => {
             props.navigation.navigate("Login");
@@ -92,14 +91,14 @@ const Register = (props) => {
           {error ? <Error message={error} /> : null}
         </View>
         <View>
-          <EasyButton large secondary onPress={() => register()}>
+          <EasyButton large primary onPress={() => register()}>
             <Text style={{ color: "white" }}>Register</Text>
           </EasyButton>
         </View>
         <View>
           <EasyButton
             large
-            primary
+            secondary
             onPress={() => props.navigation.navigate("Login")}
           >
             <Text style={{ color: "white" }}>Back to Login</Text>

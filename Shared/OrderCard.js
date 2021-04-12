@@ -35,15 +35,15 @@ const OrderCard = (props) => {
     if (props.status == "3") {
       setOrderStatus(<TrafficLight unavailable></TrafficLight>);
       setStatusText("pending");
-      setCardColor("#e74c3c");
+      setCardColor("#E74C3C");
     } else if (props.status == "2") {
       setOrderStatus(<TrafficLight limited></TrafficLight>);
       setStatusText("shipped");
-      setCardColor("#f1c40f");
+      setCardColor("#F1C40F");
     } else {
       setOrderStatus(<TrafficLight available></TrafficLight>);
       setStatusText("delivered");
-      setCardColor("#2ecc71");
+      setCardColor("#2ECC71");
     }
 
     return () => {
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   title: {
-    backgroundColor: "#62b1f6",
+    backgroundColor: "#62B1F6",
     padding: 5,
   },
   priceContainer: {

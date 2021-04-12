@@ -15,10 +15,10 @@ const TrafficLight = styled.View`
   ${(props) =>
     props.limited &&
     css`
-      background: #ff3003;
+      background: #ffe033;
     `}
 
-  ${(props) =>
+    ${(props) =>
     props.unavailable &&
     css`
       background: #ec241a;
