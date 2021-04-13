@@ -1,37 +1,25 @@
 import React, { useContext } from "react";
-import {
-  View,
-  Dimensions,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
-import {
-  Container,
-  Text,
-  Left,
-  Right,
-  H1
-} from "native-base";
-import { SwipeListView } from 'react-native-swipe-list-view'
-import CartItem from './CartItem'
+import { View, Dimensions, StyleSheet, TouchableOpacity } from "react-native";
+import { Container, Text, Left, Right, H1 } from "native-base";
+import { SwipeListView } from "react-native-swipe-list-view";
+import CartItem from "./CartItem";
 
 import Icon from "react-native-vector-icons/FontAwesome";
-import EasyButton from "../../Shared/StyledComponents/EasyButton"
+import EasyButton from "../../Shared/StyledComponents/EasyButton";
 
 import { connect } from "react-redux";
 import * as actions from "../../Redux/Actions/cartActions";
-import AuthGlobal from "../../Context/store/AuthGlobal"
+import AuthGlobal from "../../Context/store/AuthGlobal";
 
 var { height, width } = Dimensions.get("window");
 
 const Cart = (props) => {
-
   const context = useContext(AuthGlobal);
 
-    var total = 0;
-    props.cartItems.forEach(cart => {
-        return (total += cart.product.price)
-    });
+  var total = 0;
+  props.cartItems.forEach((cart) => {
+    return (total += cart.product.price);
+  });
 
   return (
     <>
@@ -40,14 +28,12 @@ const Cart = (props) => {
           <H1 style={{ alignSelf: "center" }}>Cart</H1>
           <SwipeListView
             data={props.cartItems}
-            renderItem={(data) => (
-             <CartItem item={data} />
-            )}
+            renderItem={(data) => <CartItem item={data} />}
             renderHiddenItem={(data) => (
               <View style={styles.hiddenContainer}>
-                <TouchableOpacity 
-                style={styles.hiddenButton}
-                onPress={() => props.removeFromCart(data.item)}
+                <TouchableOpacity
+                  style={styles.hiddenButton}
+                  onPress={() => props.removeFromCart(data.item)}
                 >
                   <Icon name="trash" color={"white"} size={30} />
                 </TouchableOpacity>
@@ -63,36 +49,32 @@ const Cart = (props) => {
           />
           <View style={styles.bottomContainer}>
             <Left>
-                <Text style={styles.price}>$ {total}</Text>
+              <Text style={styles.price}>$ {total}</Text>
             </Left>
             <Right>
-                <EasyButton
-                  danger
-                  medium
-                  onPress={() => props.clearCart()}
-                >
-                  <Text style={{ color: 'white' }}>Clear</Text>
-                </EasyButton>
+              <EasyButton danger medium onPress={() => props.clearCart()}>
+                <Text style={{ color: "white" }}>Clear</Text>
+              </EasyButton>
             </Right>
             <Right>
               {context.stateUser.isAuthenticated ? (
                 <EasyButton
                   primary
                   medium
-                  onPress={() => props.navigation.navigate('Checkout')}
+                  onPress={() => props.navigation.navigate("Checkout")}
                 >
-                <Text style={{ color: 'white' }}>Checkout</Text>
+                  <Text style={{ color: "white" }}>Checkout</Text>
                 </EasyButton>
               ) : (
                 <EasyButton
                   secondary
                   medium
-                  onPress={() => props.navigation.navigate('Login')}
+                  onPress={() => props.navigation.navigate("Login")}
                 >
-                <Text style={{ color: 'white' }}>Login</Text>
+                  <Text style={{ color: "white" }}>Login</Text>
                 </EasyButton>
+                // Throwing virtualizedList error when items in cart of user not logged in, breaks, says 'the action 'NAVIGATE' with payload {'name': 'Login'} was not handled by a navigator, and does not redirect to login page when clicked.? testing now
               )}
-                
             </Right>
           </View>
         </Container>
@@ -116,9 +98,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     clearCart: () => dispatch(actions.clearCart()),
-    removeFromCart: (item) => dispatch(actions.removeFromCart(item))
-    }
-}
+    removeFromCart: (item) => dispatch(actions.removeFromCart(item)),
+  };
+};
 
 const styles = StyleSheet.create({
   emptyContainer: {
@@ -127,31 +109,31 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   bottomContainer: {
-      flexDirection: 'row',
-      position: 'absolute',
-      bottom: 0,
-      left: 0,
-      backgroundColor: 'white',
-      elevation: 20
+    flexDirection: "row",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    backgroundColor: "white",
+    elevation: 20,
   },
   price: {
-      fontSize: 18,
-      margin: 20,
-      color: 'red'
+    fontSize: 18,
+    margin: 20,
+    color: "red",
   },
   hiddenContainer: {
     flex: 1,
-    justifyContent: 'flex-end',
-    flexDirection: 'row'
+    justifyContent: "flex-end",
+    flexDirection: "row",
   },
   hiddenButton: {
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'flex-end',
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "flex-end",
     paddingRight: 25,
     height: 70,
-    width: width / 1.2
-  }
+    width: width / 1.2,
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
