@@ -15,6 +15,7 @@ const Confirm = (props) => {
 
   const confirmOrder = () => {
     const order = finalOrder.order.order;
+    console.log(order);
 
     axios
       .post(`${baseURL}orders`, order)

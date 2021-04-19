@@ -15,7 +15,8 @@ import Auth from "./Context/store/Auth";
 import Main from "./Navigators/Main";
 
 // Screens
-import ProductContainer from "./Screens/Products/ProductContainer";
+// import ProductContainer from "./Screens/Products/ProductContainer";
+// import Login from "./Screens/User/Login";
 import Header from "./Shared/Header";
 
 // LogBox.ignoreAllLogs(true);
@@ -26,6 +27,7 @@ export default function App() {
       <Provider store={store}>
         <NavigationContainer>
           <Header />
+          {/* <Login /> */}
           <Main />
           <Toast ref={(ref) => Toast.setRef(ref)} />
         </NavigationContainer>

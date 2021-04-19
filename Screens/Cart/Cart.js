@@ -17,10 +17,10 @@ const Cart = (props) => {
   const context = useContext(AuthGlobal);
 
   var total = 0;
-  props.cartItems.forEach((cart) => {
+  props.cartItems.forEach((cart, key) => {
     return (total += cart.product.price);
   });
-
+  console.log(props);
   return (
     <>
       {props.cartItems.length ? (
@@ -73,8 +73,8 @@ const Cart = (props) => {
                 >
                   <Text style={{ color: "white" }}>Login</Text>
                 </EasyButton>
-                // Throwing virtualizedList error when items in cart of user not logged in, breaks, says 'the action 'NAVIGATE' with payload {'name': 'Login'} was not handled by a navigator, and does not redirect to login page when clicked.? testing now
               )}
+              {/* Throwing virtualizedList error when items in cart of user not logged in, breaks, says 'the action 'NAVIGATE' with payload {'name': 'Login'} was not handled by a navigator, and does not redirect to login page when clicked.? testing now */}
             </Right>
           </View>
         </Container>
