@@ -34,7 +34,8 @@ const Orders = (props) => {
         renderItem={({ item, index }) => (
           <OrderCard navigation={props.navigation} {...item} editMode={true} />
         )}
-        keyExtractor={(item) => item.id}
+        // was previously keyExtractor={(item) => item.id}
+        keyExtractor={(item, index) => item.id}
       />
     </View>
   );
