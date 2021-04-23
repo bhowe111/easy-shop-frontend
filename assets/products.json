@@ -3,7 +3,7 @@
     "_id": {
       "$oid": "5f15d8852a025143f9593a7c"
     },
-    "image": "http://assets.stickpng.com/images/580b585b2edbce24c47b2b82.png",
+    "image": "https://cdn.pixabay.com/photo/2016/04/17/22/23/snow-boarder-1335696__340.png",
     "brand": "Burton",
     "price": 600,
     "rating": 4,
@@ -21,13 +21,13 @@
     "_id": {
       "$oid": "606df66bb2336f05fc8db47e"
     },
-    "image": "http://assets.stickpng.com/thumbs/585aa8d74f6ae202fedf290b.png",
+    "image": "https://cdn.pixabay.com/photo/2016/05/25/14/45/music-1415054__340.png",
     "brand": "Fender",
     "price": 1200,
     "rating": 5,
     "numReviews": 4,
     "isFeatured": true,
-    "name": "Fender Jaguar",
+    "name": "Fender Telecaster",
     "description": "Sunburst Electric Guitar",
     "category": {
       "$oid": "606dfb2ab2336f05fc8db47f"
@@ -39,7 +39,7 @@
     "_id": {
       "$oid": "5f15d964e520d44421ed8e9c"
     },
-    "image": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf08.png",
+    "image": "https://cdn.pixabay.com/photo/2018/08/22/05/13/gardening-3622863__340.png",
     "brand": "Outdoor Research",
     "price": 38,
     "rating": 5,
@@ -75,7 +75,7 @@
     "_id": {
       "$oid": "5f15da13e520d44421ed8e9e"
     },
-    "image": "http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c27d.png",
+    "image": "https://cdn.pixabay.com/photo/2017/07/24/17/18/sofa-2535448__340.png",
     "brand": "Mobilix",
     "price": 1000,
     "rating": 5,
@@ -111,7 +111,7 @@
     "_id": {
       "$oid": "6070b28a49703d8f5b0ec5df"
     },
-    "image": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b27cb.png",
+    "image": "https://cdn.pixabay.com/photo/2016/06/17/22/44/cream-1464295__340.png",
     "brand": "Lotus",
     "price": 15,
     "rating": 2,
@@ -129,14 +129,14 @@
     "_id": {
       "$oid": "606e0555b2336f05fc8db483"
     },
-    "image": "http://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bfba.png",
-    "brand": "Beats by Dre",
+    "image": "https://cdn.pixabay.com/photo/2017/11/05/00/58/headphones-2919314__340.png",
+    "brand": "Sony",
     "price": 100,
     "rating": 3,
     "numReviews": 1,
     "isFeatured": true,
-    "name": "Beats Headphones",
-    "description": "Pink wireless headphones",
+    "name": "Sony Headphones",
+    "description": "Noise canceling headphones",
     "category": {
       "$oid": "5f15d545f3a046427a1c26e1"
     },
