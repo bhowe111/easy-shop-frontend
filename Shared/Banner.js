@@ -9,10 +9,10 @@ const Banner = () => {
 
   useEffect(() => {
     setBannerData([
-      "https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "https://www.sportrx.com/sportrx-blog/wp-content/uploads/2019/07/real-ray-bans-vs-fake-ray-bans.jpg",
-      "https://shershegoes.com/wp-content/uploads/best-chelsea-boots-womens.jpg",
-      "https://empire-s3-production.bobvila.com/articles/wp-content/uploads/2021/01/best_garden_trowel-main.jpg",
+      "https://cdn.pixabay.com/photo/2017/01/23/17/49/xbox-2003277__340.jpg",
+      "https://cdn.pixabay.com/photo/2017/04/10/20/10/ray-bans-2219647__340.jpg",
+      "https://cdn.pixabay.com/photo/2020/05/26/07/06/screwdriver-5221752__340.jpg",
+      "https://cdn.pixabay.com/photo/2018/11/30/02/11/winter-boots-3846915__340.jpg",
     ]);
 
     return () => {
