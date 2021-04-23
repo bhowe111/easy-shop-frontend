@@ -52,6 +52,7 @@
     "styled-components": "^5.2.1",
     "topo": "^3.0.3"
   },
+  "homepage": "/webapp",
   "devDependencies": {
     "@babel/core": "~7.9.0"
   },
