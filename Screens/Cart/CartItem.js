@@ -12,6 +12,7 @@ const CartItem = (props) => {
     >
       <Left>
         <Thumbnail
+          style={styles.img}
           source={{
             uri: data.image
               ? data.image
@@ -39,8 +40,11 @@ const styles = StyleSheet.create({
   },
   body: {
     margin: 10,
-    alignItems: "center",
+    alignItems: "stretch",
     flexDirection: "row",
+  },
+  img: {
+    position: "relative",
   },
 });
 

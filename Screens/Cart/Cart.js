@@ -74,7 +74,6 @@ const Cart = (props) => {
                   <Text style={{ color: "white" }}>Login</Text>
                 </EasyButton>
               )}
-              {/* Throwing virtualizedList error when items in cart of user not logged in, breaks, says 'the action 'NAVIGATE' with payload {'name': 'Login'} was not handled by a navigator, and does not redirect to login page when clicked.? testing now */}
             </Right>
           </View>
         </Container>
@@ -123,7 +122,7 @@ const styles = StyleSheet.create({
   },
   hiddenContainer: {
     flex: 1,
-    justifyContent: "flex-end",
+    justifyContent: "center",
     flexDirection: "row",
   },
   hiddenButton: {

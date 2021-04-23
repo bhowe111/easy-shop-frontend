@@ -29,6 +29,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Welcome to Easy Shop, a full stack React Native marketplace app. \nUsers may create a unique profile and password, browse the shop, view product details, add items to cart, fill out shipping and payment information, and send orders. \nAdmins may track and update orders, view user information, as well as add, update and delete products. Enjoy!"
   }
 }
