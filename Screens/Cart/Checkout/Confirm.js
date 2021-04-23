@@ -14,6 +14,10 @@ const Confirm = (props) => {
   const finalOrder = props.route.params;
 
   const confirmOrder = () => {
+    setTimeout(() => {
+      props.clearCart();
+      props.navigation.navigate("Cart");
+    }, 500);
     const order = finalOrder.order.order;
     console.log(order);
 
