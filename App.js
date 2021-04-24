@@ -25,7 +25,6 @@ export default function App() {
       <Provider store={store}>
         <NavigationContainer>
           <Header />
-          {/* <Login /> */}
           <Main />
           <Toast ref={(ref) => Toast.setRef(ref)} />
         </NavigationContainer>

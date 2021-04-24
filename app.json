@@ -13,7 +13,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.bhowe111.easyshop",
@@ -30,6 +32,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "Welcome to Easy Shop, a full stack React Native marketplace app. \nUsers may create a unique profile and password, browse the shop, view product details, add items to cart, fill out shipping and payment information, and send orders. \nAdmins may track and update orders, view user information, as well as add, update and delete products. Enjoy! \nTO VIEW EASY SHOP, Android users may scan the QR code. Browser and iOS users, please log in to your Expo account first, either on your mobile device or through the browser link below the QR code."
+    "description": "Welcome to Easy Shop, a full stack React Native marketplace app. \n\nUsers may create a unique profile and password, browse the shop, view product details, add items to cart, fill out shipping and payment information, and send orders. \n\nAdmins may track and update orders, view user information, as well as add, update and delete products. Enjoy! \n\nTO VIEW EASY SHOP, Android users may scan the QR code. Browser and iOS users, please log in to your Expo account first, either on your mobile device or through the browser link below the QR code.",
+    "githubUrl": "https://github.com/bhowe111/easy-shop-frontend"
   }
 }
