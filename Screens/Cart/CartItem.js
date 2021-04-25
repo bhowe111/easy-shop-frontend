@@ -40,11 +40,13 @@ const styles = StyleSheet.create({
   },
   body: {
     margin: 10,
-    alignItems: "stretch",
+    alignItems: "center",
     flexDirection: "row",
+    paddingLeft: 50,
   },
   img: {
-    position: "relative",
+    position: "absolute",
+    paddingLeft: 10,
   },
 });
 
